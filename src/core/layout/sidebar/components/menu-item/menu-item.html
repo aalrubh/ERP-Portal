@@ -1,0 +1,19 @@
+<li>
+    <button class="menu-item" (click)="toggleMenuItem(item())">
+        @if (item().icon) {
+        <img class="icon" [src]="item().icon" />
+        }
+        <span class="menu-item-title"> {{ item().title }} </span>
+        @if (item().children?.length) {
+        <img class="arrow" [ngClass]="item().isOpen? 'open' : 'closed'" src="icons/adown.svg" />
+        }
+    </button>
+
+    @if (item().isOpen && item().children?.length) {
+    <ul class="submenu" animate.enter="slide-in" animate.leave="slide-out">
+        @for (child of item().children; track child.title) {
+        <portal-menu-item [item]="child" [collapsed]="collapsed()" />
+        }
+    </ul>
+    }
+</li>

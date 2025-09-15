@@ -1,13 +1,25 @@
-import { Component } from '@angular/core';
-import { RouterOutlet } from "@angular/router";
-
+import { Component, Input } from '@angular/core';
+import { NgClass } from '@angular/common';
+import { menuItem } from './components/menu-item/menu-item.interface';
+import sidebarNodes from './sidebar_nodes.json';
+import { MenuItemComponent } from "./components/menu-item/menu-item"
 @Component({
 	selector: 'portal-sidebar',
-	imports: [RouterOutlet],
+	standalone: true,
+	imports: [NgClass, MenuItemComponent],
 	templateUrl: './sidebar.html',
-	styleUrl: './sidebar.scss'
+	styleUrls: ['./sidebar.scss']
 })
 export class Sidebar {
-	//I expect an array that will work with an array that will be gotten from http. but for now load from json
+	// Accept collapsed state from parent container
+	@Input() isSidebarCollapsed = false;
+
+	isCollapsed : boolean = false;
+	// For now load from local JSON; later can be provided via HTTP
+	menu_nodes: menuItem[] = sidebarNodes as menuItem[];
+
+
 
 }
+
+

@@ -1,0 +1,89 @@
+// Menu-item SCSS
+// Define meaningful variables for colors and sizing
+$mi-text-color: #000000;
+$mi-hover-bg: rgba(255, 255, 255, 0.15);
+$mi-title-color: $mi-text-color;
+$mi-icon-shadow: rgba(0, 0, 0, 0.15);
+$mi-arrow-opacity: 0.85;
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 12px;
+  border: 0;
+  background: transparent;
+  color: $mi-text-color;
+  padding: 12px 14px;
+  cursor: pointer;
+  text-align: left;
+  transition: background 160ms ease, color 160ms ease;
+
+  &:hover {
+    background: $mi-hover-bg;
+    color: $mi-text-color;
+  }
+
+  .icon {
+    width: 20px;
+    height: 20px;
+    flex: 0 0 20px;
+    object-fit: contain;
+    filter: drop-shadow(0 0 1px $mi-icon-shadow);
+  }
+
+  .menu-item-title {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1;
+    letter-spacing: 0.2px;
+    color: $mi-title-color;
+    white-space: nowrap;
+  }
+
+  .arrow {
+    margin-left: auto;
+    width: 16px;
+    height: 16px;
+    opacity: $mi-arrow-opacity;
+    transition: transform 160ms ease-in-out, opacity 160ms ease;
+
+    &.open { transform: rotate(180deg); }
+  }
+}
+
+.submenu {
+  list-style: none;
+  margin: 0;
+  padding: 2px 0 6px;
+
+  &.slide-in { animation: subMenuSlide 240ms ease forwards; }
+  &.slide-out {
+    animation: subMenuSlide 180ms ease reverse;
+    overflow: hidden;
+  }
+}
+
+// Indentation for nested levels (using ancestor context)
+:host-context(.submenu) .menu-item { padding-left: 32px; }
+:host-context(.submenu .submenu) .menu-item { padding-left: 48px; }
+:host-context(.submenu .submenu .submenu) .menu-item { padding-left: 64px; }
+:host-context(.submenu .submenu .submenu .submenu) .menu-item { padding-left: 80px; }
+
+// Collapsed mode — when sidebar host has .collapsed
+:host-context(.collapsed) {
+  .menu-item {
+    justify-content: center;
+    gap: 0;
+    padding-left: 16px;
+    padding-right: 16px;
+
+    .menu-item-title,
+    .arrow { display: none; }
+  }
+}
+
+@keyframes subMenuSlide {
+  from { opacity: 0; transform: translateY(-8px); }
+  to { opacity: 1; transform: translateY(0); }
+}

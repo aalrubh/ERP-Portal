@@ -1,15 +1,14 @@
 
 /*
-    Ths file will be used as a guide for the required items of sidebar items
+    This file defines the structure of a sidebar item.
 */
 
-interface item {
+export interface menuItem {
     title: string;
     icon?: string;
-    isOpen?: false;
+    isOpen?: boolean;
     route?: string;
-
-    children?: item[];
+    children?: menuItem[];
 }
 
 /*
@@ -17,5 +16,5 @@ interface item {
     Icon        (Optional)  : The icon that will set to the left of the item
     isOpen      (Optional)  : A boolean that will be used to open and close the sidebar
     Route       (Optional)  : A string that contains the pointed to path to be used by Router Module
-    Childrem    (Optional)  : The sub-items of the parent item
+    Children    (Optional)  : The sub-items of the parent item
 */

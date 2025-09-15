@@ -1,31 +1,5 @@
-<!--
-  Sidebar Template
-  - Renders menu from side_bar using @for/@if.
-  - Shows icon, title, and optional arrow; applies 'collapsed' via [ngClass] from parent input.
-  - Clicking a menu item calls toggleMenuItem; submenus render when item.isOpen.
--->
-<div class="sidebar-class">
-    <ul class="sidebar-menu" [ngClass]="{ 'collapsed': isSidebarCollapsed }">
-        @for (item of side_bar; track item.title;) {
-        <li>
-            <button class="menu-item" (click)="toggleMenuItem(item)">
-                @if (item.icon) {
-                <img class="icon" [src]="item.icon" />
-                }
-                <span class="menu-item-title"> {{ item.title }} </span>
-                @if (item.children?.length) {
-                <img class="arrow" [ngClass]="item.isOpen? 'open' : 'closed'" src="icons/adown.svg" />
-                }
-            </button>
-
-            @if (item.isOpen && item.children?.length) {
-            <ul class="submenu" animate.enter="slide-in" animate.leave="slide-out">
-                @for (child of item.children; track child.title) {
-                <li> <button class="submenu-item" animate.enter="slide-in" animate.leave="slide-out">{{ child.title }}</button> </li>
-                }
-            </ul>
-            }
-        </li>
-        }
-    </ul>
-</div>
+<ul>
+    @for (node of menu_nodes; track node.title;) {
+    <portal-menu-item [item]="node" [collapsed]="isCollapsed"></portal-menu-item>
+    }
+</ul>
