@@ -1,0 +1,10 @@
+@use 'shared/styles/variables' as *;
+@use 'shared/styles/mixins';
+@use 'shared/styles/functions';
+@use 'shared/styles/reset';
+
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: system-ui, -apple-system, Roboto, sans-serif;
+}

@@ -1,0 +1,450 @@
+[
+    {
+        "icon": "icons/dashboard.svg",
+        "title": "Dashboard",
+        "isOpen": false,
+        "children": [
+            {
+                "title": "Custom Widgets"
+            },
+            {
+                "title": "Notifications & Alerts"
+            },
+            {
+                "title": "Recent Activities"
+            }
+        ]
+    },
+    {
+        "icon": "icons/hr.svg",
+        "title": "Human Resources",
+        "isOpen": false,
+        "children": [
+            {
+                "title": "Employee Directory"
+            },
+            {
+                "title": "Attendance Tracker"
+            },
+            {
+                "title": "Leave Requests"
+            },
+            {
+                "title": "Absence Management"
+            },
+            {
+                "title": "Payroll & Compensation"
+            },
+            {
+                "title": "Performance Reviews"
+            },
+            {
+                "title": "Recruitment / Applicant Tracking"
+            },
+            {
+                "title": "Training & Development"
+            },
+            {
+                "title": "HR Analytics"
+            },
+            {
+                "title": "Benefits Administration"
+            },
+            {
+                "title": "Timesheets"
+            },
+            {
+                "title": "Org Chart"
+            }
+        ]
+    },
+    {
+        "icon": "icons/finance.svg",
+        "title": "Finance & Accounting",
+        "isOpen": false,
+        "children": [
+            {
+                "title": "General Ledger"
+            },
+            {
+                "title": "Accounts Payable"
+            },
+            {
+                "title": "Accounts Receivable"
+            },
+            {
+                "title": "Expense Management"
+            },
+            {
+                "title": "Budgeting & Forecasting"
+            },
+            {
+                "title": "Financial Reports"
+            },
+            {
+                "title": "Fixed Asset Management"
+            },
+            {
+                "title": "Tax Management"
+            },
+            {
+                "title": "Audit Trail"
+            },
+            {
+                "title": "Bank Reconciliation"
+            }
+        ]
+    },
+    {
+        "icon": "icons/procurement.svg",
+        "title": "Procurement / Purchasing",
+        "isOpen": false,
+        "children": [
+            {
+                "title": "Purchase Requests"
+            },
+            {
+                "title": "Purchase Orders"
+            },
+            {
+                "title": "Vendor Management"
+            },
+            {
+                "title": "Quotations & Tenders"
+            },
+            {
+                "title": "Contract Management"
+            },
+            {
+                "title": "Procurement Analytics"
+            },
+            {
+                "title": "Goods Receipt Notes"
+            },
+            {
+                "title": "Invoice Matching"
+            }
+        ]
+    },
+    {
+        "icon": "icons/warehouse.svg",
+        "title": "Inventory & Warehouse",
+        "isOpen": false,
+        "children": [
+            {
+                "title": "Inventory Dashboard"
+            },
+            {
+                "title": "Stock Management"
+            },
+            {
+                "title": "Barcode Scanning"
+            },
+            {
+                "title": "Warehouse Transfers"
+            },
+            {
+                "title": "Batch/Lot Tracking"
+            },
+            {
+                "title": "Reorder Management"
+            },
+            {
+                "title": "Inventory Valuation"
+            },
+            {
+                "title": "Stock Adjustments"
+            },
+            {
+                "title": "Inventory Audits"
+            }
+        ]
+    },
+    {
+        "icon": "icons/logistics.svg",
+        "title": "Supply Chain & Logistics",
+        "isOpen": false,
+        "children": [
+            {
+                "title": "Supply Chain Planning"
+            },
+            {
+                "title": "Shipment Tracking"
+            },
+            {
+                "title": "Delivery Scheduling"
+            },
+            {
+                "title": "Carrier Integration"
+            },
+            {
+                "title": "Fleet Management"
+            },
+            {
+                "title": "Route Optimization"
+            },
+            {
+                "title": "Logistics Reports"
+            }
+        ]
+    },
+    {
+        "icon": "icons/sales.svg",
+        "title": "Sales & CRM",
+        "isOpen": false,
+        "children": [
+            {
+                "title": "Leads & Opportunities"
+            },
+            {
+                "title": "Client Database"
+            },
+            {
+                "title": "Quotation Management"
+            },
+            {
+                "title": "Sales Orders"
+            },
+            {
+                "title": "Invoicing"
+            },
+            {
+                "title": "Sales Forecasting"
+            },
+            {
+                "title": "Customer Interaction Logs"
+            },
+            {
+                "title": "Call/Meeting Scheduler"
+            },
+            {
+                "title": "CRM Analytics"
+            }
+        ]
+    },
+    {
+        "icon": "icons/manufactering.svg",
+        "title": "Manufacturing / Production",
+        "isOpen": false,
+        "children": [
+            {
+                "title": "Work Orders"
+            },
+            {
+                "title": "Bill of Materials (BOM)"
+            },
+            {
+                "title": "Production Planning"
+            },
+            {
+                "title": "Shop Floor Control"
+            },
+            {
+                "title": "Quality Control"
+            },
+            {
+                "title": "Maintenance Scheduling"
+            },
+            {
+                "title": "Downtime Tracking"
+            },
+            {
+                "title": "Manufacturing Analytics"
+            }
+        ]
+    },
+    {
+        "icon": "icons/projects.svg",
+        "title": "Projects & Tasks",
+        "isOpen": false,
+        "children": [
+            {
+                "title": "Project Dashboard"
+            },
+            {
+                "title": "Task Management"
+            },
+            {
+                "title": "Resource Allocation"
+            },
+            {
+                "title": "Time Tracking"
+            },
+            {
+                "title": "Gantt Charts"
+            },
+            {
+                "title": "Milestones & Deadlines"
+            },
+            {
+                "title": "Budget vs Actual"
+            }
+        ]
+    },
+    {
+        "icon": "icons/documentation.svg",
+        "title": "Documents & Records",
+        "isOpen": false,
+        "children": [
+            {
+                "title": "Document Management System"
+            },
+            {
+                "title": "Policy Repository"
+            },
+            {
+                "title": "Contracts & Agreements"
+            },
+            {
+                "title": "Version Control"
+            },
+            {
+                "title": "Document Sharing"
+            }
+        ]
+    },
+    {
+        "icon": "icons/legal.svg",
+        "title": "Legal & Compliance",
+        "isOpen": false,
+        "children": [
+            {
+                "title": "Compliance Tracker"
+            },
+            {
+                "title": "Case Management"
+            },
+            {
+                "title": "Policy Management"
+            },
+            {
+                "title": "Risk Assessment Tools"
+            },
+            {
+                "title": "Regulatory Reporting"
+            }
+        ]
+    },
+    {
+        "icon": "icons/it_support.svg",
+        "title": "IT & Support",
+        "isOpen": false,
+        "children": [
+            {
+                "title": "IT Asset Management"
+            },
+            {
+                "title": "Helpdesk / Ticketing System"
+            },
+            {
+                "title": "Access Control"
+            },
+            {
+                "title": "Software Licensing"
+            },
+            {
+                "title": "Incident Reports"
+            },
+            {
+                "title": "Internal Tools Portal"
+            }
+        ]
+    },
+    {
+        "icon": "icons/customer_portal.svg",
+        "title": "Customer Portal",
+        "isOpen": false,
+        "children": [
+            {
+                "title": "Self-Service Portal"
+            },
+            {
+                "title": "Order Tracking"
+            },
+            {
+                "title": "Support Requests"
+            },
+            {
+                "title": "Invoice Downloads"
+            },
+            {
+                "title": "Document Sharing"
+            },
+            {
+                "title": "Live Chat / Messaging"
+            }
+        ]
+    },
+    {
+        "icon": "icons/analytics_reports.svg",
+        "title": "Analytics & Reports",
+        "isOpen": false,
+        "children": [
+            {
+                "title": "Custom Report Builder"
+            },
+            {
+                "title": "Department-Specific Dashboards"
+            },
+            {
+                "title": "Scheduled Reports"
+            },
+            {
+                "title": "Export Tools"
+            },
+            {
+                "title": "Business Intelligence Integration"
+            }
+        ]
+    },
+    {
+        "icon": "icons/security.svg",
+        "title": "Security & Administration",
+        "isOpen": false,
+        "children": [
+            {
+                "title": "User Roles & Permissions"
+            },
+            {
+                "title": "Audit Logs"
+            },
+            {
+                "title": "Multi-Factor Authentication"
+            },
+            {
+                "title": "Data Backup Settings"
+            },
+            {
+                "title": "API Access Management"
+            },
+            {
+                "title": "IP Whitelisting"
+            }
+        ]
+    },
+    {
+        "icon": "icons/system_settings.svg",
+        "title": "System Settings",
+        "isOpen": false,
+        "children": [
+            {
+                "title": "Company Profile"
+            },
+            {
+                "title": "Localization"
+            },
+            {
+                "title": "Workflow Automation"
+            },
+            {
+                "title": "Email & Notification Settings"
+            },
+            {
+                "title": "Integration Settings"
+            },
+            {
+                "title": "Theme/Appearance Settings"
+            }
+        ]
+    }
+]

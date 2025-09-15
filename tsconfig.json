@@ -10,22 +10,44 @@
     "noFallthroughCasesInSwitch": true,
     "skipLibCheck": true,
     "isolatedModules": true,
+
     "experimentalDecorators": true,
     "importHelpers": true,
+
     "target": "ES2022",
-    "module": "preserve"
+    "module": "preserve",
+
+    "baseUrl": "src",
+    "paths": {
+      "@core/*": ["core/*"],
+      "@core/layout/*": ["core/layout/*"],
+      "@core/services/*": ["core/services/*"],
+      "@features/*": ["features/*"],
+      "@shared/*": ["shared/*"],
+      "@ui/*": ["shared/ui/*"],
+      "@pipes/*": ["shared/pipes/*"],
+      "@directives/*": ["shared/directives/*"],
+      "@animations/*": ["shared/animations/*"],
+      "@styles/*": ["shared/styles/*"],
+      "@assets/*": ["assets/*"],
+      "@env/*": ["environments/*"]
+    },
+
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "useDefineForClassFields": true
+
   },
+
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
     "strictInjectionParameters": true,
     "strictInputAccessModifiers": true,
     "typeCheckHostBindings": true,
     "strictTemplates": true
+
   },
   "files": [],
-  "references": [
-    {
-      "path": "./tsconfig.app.json"
-    }
-  ]
+  "references": [{"path": "./tsconfig.app.json"}]
 }
