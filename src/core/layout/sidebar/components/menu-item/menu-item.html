@@ -1,7 +1,8 @@
 <li>
     <button class="menu-item" (click)="toggleMenuItem(item())">
         @if (item().icon) {
-        <img class="icon" [src]="item().icon" />
+        <!-- <mat-icon [svgIcon]="item().icon"></mat-icon> -->
+        <img class="icon" [src]="item().icon" [title]="item().title" />
         }
         <span class="menu-item-title"> {{ item().title }} </span>
         @if (item().children?.length) {
