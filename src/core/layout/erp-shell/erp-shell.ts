@@ -1,22 +1,20 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
 import { Sidebar } from "../sidebar/sidebar";
-import { MatIconRegistry } from '@angular/material/icon';
-import { DomSanitizer } from '@angular/platform-browser';
+import { Header } from "../header/header";
+import { Footer } from "../footer/footer";
+import { RouterOutlet } from '@angular/router'
 
 @Component({
   selector: 'portal-root',
   standalone: true,
-  imports: [RouterOutlet, Sidebar],
+  imports: [Sidebar, Header, Footer, RouterOutlet],
   templateUrl: './erp-shell.html',
   styleUrls: ['./erp-shell.scss']
 })
 export class ErpShell {
-constructor(iconReg: MatIconRegistry, sanitizer: DomSanitizer) {
-  iconReg.addSvgIconResolver((name, namespace) => {
-    // supports namespaces like "outline:dashboard"
-    const ns = namespace ? `${namespace}/` : '';
-    return sanitizer.bypassSecurityTrustResourceUrl(`assets/icons/${ns}${name}.svg`);
-  });
-}
+
+  /* Placeholders ...*/
+  title : string = "Dashboard";
+  employee_name : string = "Bilal Zidan";
+  employee_profile_picture : string = "images/dwd.jpg";
 }

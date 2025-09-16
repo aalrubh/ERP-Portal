@@ -1,4 +1,19 @@
-<div>
-    <h1>Shell Test</h1>
+<div class="shell">
+    <portal-header></portal-header>
+
     <portal-sidebar></portal-sidebar>
+
+    <div class = "main">
+        <div class="top-bar">
+            <span class = "title-class"> {{title}} </span>
+            <li><span>{{employee_name}}</span></li>
+            <li><img [src]="employee_profile_picture"></li>
+        </div>
+
+        <div class = "router-outlet">
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+
+    <portal-footer></portal-footer>
 </div>

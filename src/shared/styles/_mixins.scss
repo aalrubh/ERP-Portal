@@ -2,8 +2,6 @@
     This file will be used for mixins for the project
 */
 
-@import './variables';
-
 @mixin flexContainer (
     $direction: row,
     $wrap: wrap,
@@ -60,12 +58,15 @@
 }
 
 @mixin gridArea (
-    $x1, 
     $y1, 
-    $x2, 
-    $y2
+    $y2, 
+    $x1, 
+    $x2
 ) {
-  grid-area: $y1 / $x1 / ($y2 + 1) / ($x2 + 1);
+  grid-row-start:       $y1;
+  grid-row-end:         $y2 + 1;
+  grid-column-start:    $x1;
+  grid-column-end:      $x2 + 1;
 }
 
 @mixin border (
@@ -99,20 +100,20 @@
     }
 }
 
-@mixin tablet {
-  @media only screen and (min-width: ($tablet * 1px)) {
-    @content;
-  }
-}
+// @mixin tablet {
+//   @media only screen and (min-width: ($tablet * 1px)) {
+//     @content;
+//   }
+// }
 
-@mixin large {
-  @media only screen and (min-width: ($large * 1px)) {
-    @content;
-  }
-}
+// @mixin large {
+//   @media only screen and (min-width: ($large * 1px)) {
+//     @content;
+//   }
+// }
 
-@mixin desktop {
-  @media only screen and (min-width: ($desktop * 1px)) {
-    @content;
-  }
-}
+// @mixin desktop {
+//   @media only screen and (min-width: ($desktop * 1px)) {
+//     @content;
+//   }
+// }

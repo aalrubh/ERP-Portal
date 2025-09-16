@@ -1,0 +1,36 @@
+@use './../../../shared/styles/styles.scss' as *;
+
+div {
+    @include flexContainer(row, wrap, flex-start, center, 25px);
+    background-color: $rose;
+    padding: 8px 10px ;
+    img {
+        max-width: 30px;
+    }
+
+    span {
+        font-size: large;
+        font-weight: bold;
+        color: $black;
+        justify-self: right;
+        justify-content: right;
+    }
+
+    button {
+        border: none;
+        background: none;
+        font-size: large;
+        font-weight: bold;
+        padding: 5px 10px;
+        border-radius: 10px;
+        
+        &:hover {
+            cursor: pointer;
+            background: $rose-200;
+        }
+    }
+
+    .cname {
+        margin-left: auto;
+    }
+}

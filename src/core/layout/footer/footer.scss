@@ -1,0 +1,19 @@
+@use './../../../shared/styles/styles.scss' as *;
+
+div {
+    display: flex;
+    padding: 10px 20px;
+    margin: 10px;
+    margin-bottom: 0;
+
+    @include border(all, 1px, solid, $border-color, 10px);
+    background-color: $gray-50;
+    border-radius: 10px;
+
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+
+    p {
+        margin-left: auto;
+    }
+}

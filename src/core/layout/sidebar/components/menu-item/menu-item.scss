@@ -1,5 +1,5 @@
-// Menu-item SCSS
-// Define meaningful variables for colors and sizing
+@use './../../../../../shared/styles/styles.scss' as *;
+
 $mi-text-color: #000000;
 $mi-hover-bg: rgba(255, 255, 255, 0.15);
 $mi-title-color: $mi-text-color;
@@ -7,6 +7,7 @@ $mi-icon-shadow: rgba(0, 0, 0, 0.15);
 $mi-arrow-opacity: 0.85;
 
 .menu-item {
+  width: 275px;
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -20,7 +21,7 @@ $mi-arrow-opacity: 0.85;
   transition: background 160ms ease, color 160ms ease;
 
   &:hover {
-    background: $mi-hover-bg;
+    background: $surface-color;
     color: $mi-text-color;
   }
 
@@ -39,6 +40,7 @@ $mi-arrow-opacity: 0.85;
     letter-spacing: 0.2px;
     color: $mi-title-color;
     white-space: nowrap;
+    margin-right: auto;
   }
 
   .arrow {
