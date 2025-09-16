@@ -1,0 +1,118 @@
+/*
+    This file will be used for mixins for the project
+*/
+
+@import './variables';
+
+@mixin flexContainer (
+    $direction: row,
+    $wrap: wrap,
+    $horizontal: null,
+    $vertical: null,
+    $gap: null,
+    $inline: false,
+    $content: null
+
+    /*
+        Direction   Main-Axis   Cross-Axis
+        Row             x           y
+        Column          y           x
+    */
+) {
+    display: if($inline, inline-flex, flex);
+
+    flex-direction: $direction;
+    flex-wrap: $wrap;
+
+    align-content: $content;
+
+    gap: $gap;
+    
+    @if ($direction == row or $direction == row-reverse) {
+        justify-content: $horizontal;
+        align-items: $vertical;
+    }
+
+    @else {
+        justify-content: $vertical;
+        align-items: $horizontal;
+    }
+}
+
+@mixin gridContainer (
+    $rows: null, 
+    $columns: null, 
+    $gap: null, 
+    $row-gap: null, 
+    $column-gap: null,
+    $inline: false
+) {
+    
+    display: if($inline, inline-grid, grid);
+
+    grid-template-rows: $rows;
+    grid-template-columns: $columns;
+
+    gap: $gap;
+
+    row-gap: $row-gap;
+    column-gap: $column-gap;
+}
+
+@mixin gridArea (
+    $x1, 
+    $y1, 
+    $x2, 
+    $y2
+) {
+  grid-area: $y1 / $x1 / ($y2 + 1) / ($x2 + 1);
+}
+
+@mixin border (
+    $side: all,
+    $width: 1px,
+    $style: solid,
+    $color: null,
+    $radius: null
+
+    /*
+        Side    Top     Bottom      Left        Right
+        all     y       y           y           y
+        x       y       y           n           n
+        y       n       n           y           y
+        
+        You can also specify a side
+    */
+) {
+    border-radius: $radius;
+
+    @if $side == all {
+        border: $width $style $color;
+    } @else if $side == y {
+        border-left: $width $style $color;
+        border-right: $width $style $color;
+    } @else if $side == x {
+        border-top: $width $style $color;
+        border-bottom: $width $style $color;
+    } @else {
+        border-#{$side}: $width $style $color;
+    }
+}
+
+@mixin tablet {
+  @media only screen and (min-width: ($tablet * 1px)) {
+    @content;
+  }
+}
+
+@mixin large {
+  @media only screen and (min-width: ($large * 1px)) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media only screen and (min-width: ($desktop * 1px)) {
+    @content;
+  }
+}
