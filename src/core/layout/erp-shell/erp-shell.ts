@@ -5,7 +5,7 @@ import { Footer } from "../footer/footer";
 import { RouterOutlet } from '@angular/router'
 
 @Component({
-  selector: 'portal-root',
+  selector: 'portal-erp-shell',
   standalone: true,
   imports: [Sidebar, Header, Footer, RouterOutlet],
   templateUrl: './erp-shell.html',

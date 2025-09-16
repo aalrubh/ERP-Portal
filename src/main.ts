@@ -1,5 +1,5 @@
 import { bootstrapApplication } from '@angular/platform-browser';
-import { ErpShell } from '@core/layout/erp-shell/erp-shell';
+import { App } from 'app/app';
 
-bootstrapApplication(ErpShell)
+bootstrapApplication(App)
   .catch(err => console.error(err));
