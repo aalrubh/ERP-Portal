@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'portal-header',
@@ -9,4 +9,10 @@ import { Component } from '@angular/core';
 export class Header {
   company_logo : string = "./clogo.png";
   company_name : string = "Ironcrest Industries";
+
+  @Output() Collapse = new EventEmitter();
+
+  collapse() {
+    this.Collapse.emit();
+  }
 }

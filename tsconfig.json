@@ -30,7 +30,8 @@
       "@animations/*": ["shared/animations/*"],
       "@styles/*": ["shared/styles/*"],
       "@assets/*": ["assets/*"],
-      "@env/*": ["environments/*"]
+      "@env/*": ["environments/*"],
+      "@auth/*": ["auth/*"],
     },
 
     "forceConsistentCasingInFileNames": true,

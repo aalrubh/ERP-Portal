@@ -19,7 +19,7 @@ export const routes: Routes = [
     {
         path: '',
         pathMatch: 'full',
-        redirectTo: '/portal',
+        redirectTo: 'portal',
     },
     {
         path: '**',

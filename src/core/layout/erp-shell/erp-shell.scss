@@ -48,5 +48,9 @@
                 border-radius: 100px;
             }
         }
+
+        .router-outlet {
+            margin: 10px;
+        }
     }
 }

@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
-import { ErpShell } from '@core/layout/erp-shell/erp-shell';
+import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'portal-root',
-  imports: [ErpShell],
+  imports: [RouterOutlet],
   templateUrl: './app.html',
   styleUrl: './app.scss'
 })

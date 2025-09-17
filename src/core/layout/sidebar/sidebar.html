@@ -1,5 +1,5 @@
 <ul>
     @for (node of menu_nodes; track node.title;) {
-    <portal-menu-item [item]="node" [collapsed]="isCollapsed"></portal-menu-item>
+    <portal-menu-item [item]="node" [collapsed]="isCollapsed" (requestExpand) = "requestOpenMenu()"></portal-menu-item>
     }
 </ul>

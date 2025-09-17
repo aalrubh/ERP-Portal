@@ -1,7 +1,7 @@
 <div class="shell">
-    <portal-header></portal-header>
+    <portal-header (Collapse)="collapsed = !collapsed"></portal-header>
 
-    <portal-sidebar></portal-sidebar>
+    <portal-sidebar [isCollapsed]="collapsed" (requestOpen) = "collapsed = false"></portal-sidebar>
 
     <div class = "main">
         <div class="top-bar">
@@ -11,7 +11,7 @@
         </div>
 
         <div class = "router-outlet">
-            <router-outlet></router-outlet>
+            <router-outlet (activate)="onActivate($event)"></router-outlet>
         </div>
     </div>
 

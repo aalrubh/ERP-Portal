@@ -2,6 +2,7 @@
     {
         "icon": "icons/dashboard.svg",
         "title": "Dashboard",
+        "route" : "/erp/dashboard",
         "isOpen": false
     },
     {
@@ -10,13 +11,17 @@
         "isOpen": false,
         "children": [
             {
-                "title": "Employee Directory"
+                "title": "Employee Directory",
+                "route" : "/erp/hr/employeeDirectory"
+                
             },
             {
-                "title": "Absence Management"
+                "title": "Absence Management",
+                "route" : "/erp/hr/absenceManagement"
             },
             {
-                "title": "Payroll"
+                "title": "Payroll",
+                "route" : "/erp/hr/payRoll"
             }
         ]
     },
@@ -26,19 +31,24 @@
         "isOpen": false,
         "children": [
             {
-                "title": "General Ledger"
+                "title": "General Ledger",
+                "route" : "/erp/finacct/generalLedger"
             },
             {
-                "title": "Expense Management"
+                "title": "Expense Management",
+                "route" : "/erp/finacct/expenseManagement"
             },
             {
-                "title": "Budgeting & Forecasting"
+                "title": "Budgeting & Forecasting",
+                "route" : "/erp/finacct/budgetting"
             },
             {
-                "title": "Financial Reports"
+                "title": "Financial Reports",
+                "route" : "/erp/finacct/financialReports"
             },
             {
-                "title": "Audit Trail"
+                "title": "Audit Trail",
+                "route" : "/erp/finacct/auditTrail"
             }
         ]
     },
@@ -48,13 +58,16 @@
         "isOpen": false,
         "children": [
             {
-                "title": "Project Dashboard"
+                "title": "Project Dashboard",
+                "route" : "/erp/proj/dashboard"
             },
             {
-                "title": "Gantt Charts"
+                "title": "Gantt Charts",
+                "route" : "/erp/proj/gantt"
             },
             {
-                "title": "Milestones & Deadlines"
+                "title": "Milestones & Deadlines",
+                "route" : "/erp/proj/milestones"
             }
         ]
     },
@@ -64,13 +77,16 @@
         "isOpen": false,
         "children": [
             {
-                "title": "Document Management System"
+                "title": "Document Management System",
+                "route" : "/erp/doc/documentManagement"
             },
             {
-                "title": "Contracts & Agreements"
+                "title": "Contracts & Agreements",
+                "route" : "/erp/doc/contracts"
             },
             {
-                "title": "Version Control"
+                "title": "Version Control",
+                "route" : "/erp/doc/versionControl"
             }
         ]
     },
@@ -80,13 +96,16 @@
         "isOpen": false,
         "children": [
             {
-                "title": "Helpdesk"
+                "title": "Helpdesk",
+                "route" : "/erp/it/helpdesk"
             },
             {
-                "title": "Software Licensing"
+                "title": "Software Licensing",
+                "route" : "/erp/it/licenses"
             },
             {
-                "title": "Incident Reports"
+                "title": "Incident Reports",
+                "route" : "/erp/it/incidents"
             }
         ]
     },
@@ -96,13 +115,16 @@
         "isOpen": false,
         "children": [
             {
-                "title": "Self-Service Portal"
+                "title": "Self-Service Portal",
+                "route" : "/erp//customerPortal/portal"
             },
             {
-                "title": "Order Tracking"
+                "title": "Order Tracking",
+                "route" : "/erp/customerPortal/orders"
             },
             {
-                "title": "Invoice Downloads"
+                "title": "Invoice Downloads",
+                "route" : "/erp/customerPortal/invoices"
             }
         ]
     },
@@ -112,13 +134,16 @@
         "isOpen": false,
         "children": [
             {
-                "title": "Localization"
+                "title": "Localization",
+                "route" : "/erp/settings/localization"
             },
             {
-                "title": "Email & Notification Settings"
+                "title": "Email & Notification Settings",
+                "route" : "/erp/settings/notificationSettings"
             },
             {
-                "title": "Theme/Appearance Settings"
+                "title": "Theme/Appearance Settings",
+                "route" : "/erp/settings/theme"
             }
         ]
     }

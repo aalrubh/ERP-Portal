@@ -6,20 +6,23 @@ import { PayrollComponent } from '../pages/payroll/payroll';
 export const routes: Routes = [
     {
         path: 'employeeDirectory',
+        title: 'Employee Directory',
         component: EmployeeDirectoryComponent
     },
     {
         path: 'absenceManagement',
+        title: 'Absence Management',
         component: AbsenceManagementComponent
     },
     {
         path: 'payRoll',
+        title: 'Payroll',
         component: PayrollComponent
     },
     {
         path: '',
         pathMatch: 'full',
-        redirectTo: '/employeeDirectory'
+        redirectTo: 'employeeDirectory'
     },
     {
         path: '**',

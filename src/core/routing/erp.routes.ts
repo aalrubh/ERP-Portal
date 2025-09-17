@@ -3,6 +3,7 @@ import { Routes } from '@angular/router';
 export const routes: Routes = [
     {
         path: 'dashboard',
+        title: 'Dashboard',
         loadComponent: () => import('./../../features/dashboard/dashboard').then(m => m.DashboardComponent),
     },
     {
@@ -36,10 +37,11 @@ export const routes: Routes = [
     {
         path: '',
         pathMatch: 'full',
-        redirectTo: './dashboard'
+        redirectTo: 'dashboard'
     },
     {
         path: '**',
+        title: 'Page Not Found',
         loadComponent: () => import('./../layout/not-found-shell/not-found-page').then(m => m.NotFoundPage),
     },
 ]

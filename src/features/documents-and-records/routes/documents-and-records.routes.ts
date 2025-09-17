@@ -19,7 +19,7 @@ export const routes: Routes = [
     {
         path: '',
         pathMatch: 'full',
-        redirectTo: '/documentManagement',
+        redirectTo: 'documentManagement',
     },
     {
         path: '**',

@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, OnChanges, Output, SimpleChanges } from '@angular/core';
 import { menuItem } from './components/menu-item/menu-item.interface';
 import sidebarNodes from './sidebar_nodes.json';
 import { MenuItemComponent } from "./components/menu-item/menu-item"
@@ -12,11 +12,14 @@ import { MatIconModule } from "@angular/material/icon"
 })
 export class Sidebar {
 	// Accept collapsed state from parent container
-	@Input() isSidebarCollapsed = false;
-
-	isCollapsed : boolean = false;
+	@Input() isCollapsed = false;
+	@Output() requestOpen = new EventEmitter();
 	// For now load from local JSON; later can be provided via HTTP
 	menu_nodes: menuItem[] = sidebarNodes as menuItem[];
+
+	requestOpenMenu() {
+		this.requestOpen.emit();
+	}
 }
 
 

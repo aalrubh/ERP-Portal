@@ -29,7 +29,7 @@ export const routes: Routes = [
     {
         path: '',
         pathMatch: 'full',
-        redirectTo: '/generalLedger',
+        redirectTo: 'generalLedger',
     },
     {
         path: '**',

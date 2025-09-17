@@ -1,91 +1,114 @@
 @use './../../../../../shared/styles/styles.scss' as *;
 
-$mi-text-color: #000000;
-$mi-hover-bg: rgba(255, 255, 255, 0.15);
-$mi-title-color: $mi-text-color;
-$mi-icon-shadow: rgba(0, 0, 0, 0.15);
-$mi-arrow-opacity: 0.85;
+/* Tweakables */
+$menu-open: 275px;
+$menu-closed: 50px;
+$ease: 200ms ease;
 
+/* Root styles for animation perf */
 .menu-item {
-  width: 275px;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  gap: 12px;
-  border: 0;
-  background: transparent;
-  color: $mi-text-color;
-  padding: 12px 14px;
-  cursor: pointer;
-  text-align: left;
-  transition: background 160ms ease, color 160ms ease;
+	width: $menu-open;
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	gap: 12px;
+	border: 0;
+	background: transparent;
+	color: $text-color;
+	padding: 12px 14px;
+	cursor: pointer;
+	text-align: left;
+	overflow: hidden;
 
-  &:hover {
-    background: $surface-color;
-    color: $mi-text-color;
-  }
+	/* One transition block */
+	transition: width $ease, gap $ease, padding $ease, background 160ms ease, color 160ms ease;
 
-  .icon {
-    width: 20px;
-    height: 20px;
-    flex: 0 0 20px;
-    object-fit: contain;
-    filter: drop-shadow(0 0 1px $mi-icon-shadow);
-  }
+	&:hover {
+		background: $surface-color;
+	}
 
-  .menu-item-title {
-    font-size: 14px;
-    font-weight: 600;
-    line-height: 1;
-    letter-spacing: 0.2px;
-    color: $mi-title-color;
-    white-space: nowrap;
-    margin-right: auto;
-  }
+	&:focus-visible {
+		outline: 2px solid $text-color;
+		outline-offset: 2px;
+		border-radius: 6px;
+	}
 
-  .arrow {
-    margin-left: auto;
-    width: 16px;
-    height: 16px;
-    opacity: $mi-arrow-opacity;
-    transition: transform 160ms ease-in-out, opacity 160ms ease;
+	.icon {
+		width: 20px;
+		height: 20px;
+		flex: 0 0 20px;
+		/* object-fit not needed for inline SVG; fine for raster icons */
+	}
 
-    &.open { transform: rotate(180deg); }
-  }
+	.menu-item-title {
+		font-size: 14px;
+		font-weight: 600;
+		line-height: 1;
+		letter-spacing: 0.2px;
+		color: $text-color;
+		white-space: nowrap;
+		margin-inline-end: auto;
+		/* animate instead of display:none */
+		opacity: 1;
+		transform: translateX(0);
+		transition: opacity 140ms ease, transform $ease;
+	}
+
+	.arrow {
+		width: 16px;
+		height: 16px;
+		transition: transform 160ms ease, opacity 160ms ease;
+		opacity: 1;
+		transform: translateX(0);
+
+		&.open {
+			transform: rotate(180deg);
+
+		}
+	}
 }
 
+/* Collapsed state: animate width, not max-width */
+.menu-item.closed {
+	width: $menu-closed;
+	gap: 0;
+	/* keep horizontal padding so icon stays centered-ish */
+	padding-inline: 14px;
+
+	.menu-item-title,
+	.arrow {
+		opacity: 0;
+		transform: translateX(-8px);
+		pointer-events: none;
+		/* behave like hidden */
+	}
+}
+
+/* Submenu animation */
 .submenu {
-  list-style: none;
-  margin: 0;
-  padding: 2px 0 6px;
+	list-style: none;
+	margin: 0;
+	padding: 2px 0 6px;
+	overflow: hidden;
+	/* helps during slide-out */
 
-  &.slide-in { animation: subMenuSlide 240ms ease forwards; }
-  &.slide-out {
-    animation: subMenuSlide 180ms ease reverse;
-    overflow: hidden;
-  }
-}
+	&.slide-in {
+		animation: subMenuSlide 240ms ease forwards;
+	}
 
-// Indentation for nested levels (using ancestor context)
-:host-context(.submenu) .menu-item { padding-left: 32px; }
-:host-context(.submenu .submenu) .menu-item { padding-left: 48px; }
-:host-context(.submenu .submenu .submenu) .menu-item { padding-left: 64px; }
-:host-context(.submenu .submenu .submenu .submenu) .menu-item { padding-left: 80px; }
-
-// Collapsed mode — when sidebar host has .collapsed
-:host-context(.collapsed) {
-  .menu-item {
-    justify-content: center;
-    gap: 0;
-    padding-left: 16px;
-    padding-right: 16px;
-
-    .menu-item-title,
-    .arrow { display: none; }
-  }
+	&.slide-out {
+		animation: subMenuSlide 180ms ease reverse;
+	}
 }
 
 @keyframes subMenuSlide {
-  from { opacity: 0; transform: translateY(-8px); }
-  to { opacity: 1; transform: translateY(0); }
+	from {
+		opacity: 0;
+		transform: translateY(-8px);
+	}
+
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
 }
