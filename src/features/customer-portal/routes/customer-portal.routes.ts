@@ -6,14 +6,17 @@ import { InvoiceDownloadsComponent } from '../pages/invoice-downloads/invoice-do
 export const routes: Routes = [
     {
         path: 'portal',
+        title: 'Self Service Portal',
         component: SelfServicePortalComponent,
     },
     {
         path: 'orders',
+        title: 'Order Tracking',
         component: OrderTrackingComponent,
     },
     {
         path: 'invoices',
+        title: 'Invoice Downloads',
         component: InvoiceDownloadsComponent,
     },
     {
@@ -23,6 +26,7 @@ export const routes: Routes = [
     },
     {
         path: '**',
+        title: 'Page Not Found',
         loadComponent: () => import('./../../../core/layout/not-found-shell/not-found-page').then(m => m.NotFoundPage),
     },
 ]

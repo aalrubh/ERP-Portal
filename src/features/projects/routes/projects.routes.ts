@@ -6,14 +6,17 @@ import { MilestonesAndDeadlinesComponent } from '../pages/milestones-and-deadlin
 export const routes: Routes = [
     {
         path: 'dashboard',
+        title: 'Projects Dashboard',
         component: ProjectDashboardComponent,
     },
     {
         path: 'gantt',
+        title: 'Gantt Charts',
         component: GanttChartsComponent,
     },
     {
         path: 'milestones',
+        title: 'Milestones and Deadlines',
         component: MilestonesAndDeadlinesComponent,
     },
     {
@@ -23,6 +26,7 @@ export const routes: Routes = [
     },
     {
         path: '**',
+        title: 'Page Not Found',
         loadComponent: () => import('./../../../core/layout/not-found-shell/not-found-page').then(m => m.NotFoundPage),
     },
 ]
