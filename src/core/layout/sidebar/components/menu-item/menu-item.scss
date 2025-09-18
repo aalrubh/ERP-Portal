@@ -5,7 +5,6 @@ $menu-open: 275px;
 $menu-closed: 50px;
 $ease: 200ms ease;
 
-/* Root styles for animation perf */
 .menu-item {
 	width: $menu-open;
 	display: flex;
@@ -20,7 +19,6 @@ $ease: 200ms ease;
 	text-align: left;
 	overflow: hidden;
 
-	/* One transition block */
 	transition: width $ease, gap $ease, padding $ease, background 160ms ease, color 160ms ease;
 
 	&:hover {
@@ -37,60 +35,50 @@ $ease: 200ms ease;
 		width: 20px;
 		height: 20px;
 		flex: 0 0 20px;
-		/* object-fit not needed for inline SVG; fine for raster icons */
 	}
 
 	.menu-item-title {
 		font-size: 14px;
 		font-weight: 600;
-		line-height: 1;
-		letter-spacing: 0.2px;
 		color: $text-color;
 		white-space: nowrap;
 		margin-inline-end: auto;
-		/* animate instead of display:none */
 		opacity: 1;
 		transform: translateX(0);
-		transition: opacity 140ms ease, transform $ease;
+		transition: opacity 300ms ease, transform $ease;
 	}
 
 	.arrow {
 		width: 16px;
 		height: 16px;
-		transition: transform 160ms ease, opacity 160ms ease;
+		transition: transform 300ms ease, opacity 300ms ease;
 		opacity: 1;
 		transform: translateX(0);
 
 		&.open {
 			transform: rotate(180deg);
-
 		}
 	}
 }
 
-/* Collapsed state: animate width, not max-width */
 .menu-item.closed {
 	width: $menu-closed;
-	gap: 0;
-	/* keep horizontal padding so icon stays centered-ish */
-	padding-inline: 14px;
+	transition: 400ms $ease;
 
 	.menu-item-title,
 	.arrow {
 		opacity: 0;
-		transform: translateX(-8px);
+		transition: opacity 400ms $ease;
+		transform: translateX(-8px) 50ms $ease;
 		pointer-events: none;
-		/* behave like hidden */
 	}
 }
 
-/* Submenu animation */
 .submenu {
 	list-style: none;
 	margin: 0;
 	padding: 2px 0 6px;
 	overflow: hidden;
-	/* helps during slide-out */
 
 	&.slide-in {
 		animation: subMenuSlide 240ms ease forwards;

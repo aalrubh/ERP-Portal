@@ -1,1 +1,40 @@
-<p>register works!</p>
+<div class="main">
+    <div class="Card">
+        <h1>Register</h1>
+        <div class="content">
+            <div class="username_div">
+                <dx-text-box label="Username" labelMode="outside" placeholder="Enter Your Username"></dx-text-box>
+            </div>
+
+            <div class="email_div">
+                <dx-text-box label="Email" labelMode="outside" placeholder="Enter Your Email"></dx-text-box>
+            </div>
+
+            <div class="confirm_email_div">
+                <dx-text-box label="Confirm Email" labelMode="outside" placeholder="Enter Your Email"></dx-text-box>
+            </div>
+
+            <div class="password_div">
+                <dx-text-box label="Password" labelMode="outside" mode="password"
+                    placeholder="Enter Your Password"></dx-text-box>
+            </div>
+
+            <div class="mobile_div">
+                <dx-text-box label="Mobile" labelMode="outside" mask="+\966 00 000 0000" maskChar=""></dx-text-box>
+            </div>
+
+            <div class="captcha">
+                <dx-check-box label="captcha" text="Captcha" hint="Captcha" iconSize="25"></dx-check-box>
+            </div>
+        </div>
+
+        <div class="submit">
+            <dx-button text="Submit" type="default"></dx-button>
+        </div>
+    </div>
+    <div class="help">
+        <span>Already have an account? <a href="">Login</a></span>
+        <br>
+        <span>Need Help? <a href="">Contact Us</a></span>
+    </div>
+</div>

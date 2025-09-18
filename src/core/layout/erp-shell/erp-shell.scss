@@ -6,7 +6,8 @@
     @include gridContainer(auto 1fr auto, auto 1fr);
 
     portal-header {
-        @include gridArea(1, 1, 1, 2);    }
+        @include gridArea(1, 1, 1, 2);
+    }
 
     portal-sidebar {
          @include gridArea(2, 3, 1, 1);

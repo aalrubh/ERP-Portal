@@ -20,7 +20,10 @@ export class ErpShell {
 	collapsed = false;
 
 	onActivate(component: unknown) {
-		queueMicrotask(() => { this.title = component?.constructor?.name ? makeTitleFromComponentName(component?.constructor?.name) : 'unknown'; });
+		queueMicrotask(() => { 
+			console.log(component?.constructor?.name);
+			
+			this.title = component?.constructor?.name ? makeTitleFromComponentName(component?.constructor?.name) : 'unknown'; });
 	}
 }
 
