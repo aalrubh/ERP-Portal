@@ -1,0 +1,83 @@
+@use './../../../shared/styles/styles.scss' as *;
+
+.main {
+    width: 100%;
+    height: 100%;
+
+    .Card {
+        @include border(all, 2px, solid, $border-color);
+        background-color: $surface-color;
+        padding: 30px;
+
+        h1 {
+            text-align: center;
+            font-size: xx-large;
+            color: $text-color;
+            margin-bottom: 80px;
+        }
+
+    }
+}
+
+.username_div,
+.password_div {
+    color: $text-color;
+    margin-bottom: 30px;
+    font-size: small;
+
+    dx-text-box {
+        width: 500px;
+        height: 50px;
+    }
+}
+
+.Forgot {
+    text-align: end;
+
+
+    a {
+        color: $text-color;
+        text-decoration: none;
+
+        &::after {
+            color: $text-color;
+        }
+    }
+}
+
+.captcha {
+    @include flexContainer();
+    margin-bottom: 20px;
+    margin: auto;
+    justify-content: center;
+    padding: 5px;
+    width: 200px;
+    margin-top: 0;
+    height: 50px;
+    @include border(all, 2px, solid $border-color);
+
+    dx-check-box {
+        text-align: center;
+        justify-content: center;
+    }
+}
+
+.submit {
+    @include flexContainer();
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+
+    dx-button {
+        width: 100px;
+        background-color: $rose;
+        @include border(all, 2px, solid $border-color);
+        font-size: medium;
+        font-weight: 400;
+    }
+}
+
+.help {
+    margin-top: 20px;
+    text-align: center;
+}

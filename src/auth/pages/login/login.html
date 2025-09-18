@@ -1,1 +1,29 @@
-<p>login works!</p>
+<div class = "main">
+    <div class="Card">
+        <h1>Sign in</h1>
+        <div class="username_div">
+            <dx-text-box label="Username" labelMode="outside" placeholder="Enter Your Username"></dx-text-box>
+            <div class="Forgot"><a href="">Forgot Username</a></div>
+        </div>
+
+        <div class="password_div">
+            <dx-text-box label="Password" labelMode="outside" mode="password"
+                placeholder="Enter Your Password"></dx-text-box>
+            <div class="Forgot"><a href="">Forgot Password</a></div>
+        </div>
+
+        <div class="captcha">
+            <dx-check-box label="captcha" text="Captcha" hint="Captcha" iconSize="25"></dx-check-box>
+        </div>
+
+        <div class="submit">
+            <dx-button text="Submit" type="default" (onClick)="buttonClicked()"></dx-button>
+        </div>
+    </div>
+
+    <div class="help">
+        <span>Dont have an account? <a href="">Register</a></span>
+        <br>
+        <span>Need Help? <a href="">Contact Us</a></span>
+    </div>
+</div>

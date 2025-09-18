@@ -32,6 +32,7 @@
       "@assets/*": ["assets/*"],
       "@env/*": ["environments/*"],
       "@auth/*": ["auth/*"],
+      "jszip": ["./node_modules/jszip/dist/jszip.min.js"],
     },
 
     "forceConsistentCasingInFileNames": true,
