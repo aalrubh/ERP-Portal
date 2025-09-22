@@ -1,3 +1,11 @@
 .page--dashboard {
   // styles for dashboard
 }
+
+@import '@shared/styles/styles.scss';
+
+
+.cards {
+  @include flexContainer(row, center, space-around);
+  @include border(3, solid $border-color, 10px);
+}

@@ -1,3 +1,18 @@
-<div class="page page--employee-directory">
-  <h1>Hello</h1>
+<portal-panel [header]="true" [footer]="true">
+  <div panel-header>Employee Directory Header</div>
+  <div panel-body>
+    <div class="page page--employee-directory">
+      <h1>Hello</h1>
+    </div>
+  </div>
+  <div panel-footer>Employee Directory Footer</div>
+</portal-panel>
+
+<div class="card">
+<portal-card [image]="true" [imageSrc]="'images/clogo.png'" [subHeadline]="true" [footer]="true">
+  <div card-headline>Employee Card Headline</div>
+  <div card-subheadline>Employee Card Subheadline</div>
+  <div card-content>This is the content of the employee card.</div>
+  <div card-footer>Employee Card Footer</div>
+</portal-card>
 </div>

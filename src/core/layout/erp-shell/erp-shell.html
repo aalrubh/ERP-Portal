@@ -1,18 +1,12 @@
 <div class="shell">
     <portal-header (Collapse)="collapsed = !collapsed"></portal-header>
 
-    <portal-sidebar [isCollapsed]="collapsed" (requestOpen) = "collapsed = false"></portal-sidebar>
+    <portal-sidebar [isCollapsed]="collapsed" (requestOpen)="collapsed = false"></portal-sidebar>
 
-    <div class = "main">
-        <div class="top-bar">
-            <span class = "title-class"> {{title}} </span>
-            <li><span>{{employee_name}}</span></li>
-            <li><img [src]="employee_profile_picture"></li>
-        </div>
+    <portal-topbar [title]="title"></portal-topbar>
 
-        <div class = "router-outlet">
-            <router-outlet (activate)="onActivate($event)"></router-outlet>
-        </div>
+    <div class="router-outlet">
+        <router-outlet (activate)="onActivate($event)"></router-outlet>
     </div>
 
     <portal-footer></portal-footer>

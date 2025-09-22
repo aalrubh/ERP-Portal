@@ -1,9 +1,9 @@
-@use './../../../../../shared/styles/styles.scss' as *;
+@import '@shared/styles/styles.scss';
 
 /* Tweakables */
 $menu-open: 275px;
 $menu-closed: 50px;
-$ease: 200ms ease;
+$ease: 300ms ease;
 
 .menu-item {
 	width: $menu-open;
@@ -19,7 +19,7 @@ $ease: 200ms ease;
 	text-align: left;
 	overflow: hidden;
 
-	transition: width $ease, gap $ease, padding $ease, background 160ms ease, color 160ms ease;
+	transition: width $ease, gap $ease, padding $ease, background 300ms ease, color 300ms ease;
 
 	&:hover {
 		background: $surface-color;
@@ -63,7 +63,7 @@ $ease: 200ms ease;
 
 .menu-item.closed {
 	width: $menu-closed;
-	transition: 400ms $ease;
+	transition: 300ms $ease;
 
 	.menu-item-title,
 	.arrow {
@@ -92,7 +92,7 @@ $ease: 200ms ease;
 @keyframes subMenuSlide {
 	from {
 		opacity: 0;
-		transform: translateY(-8px);
+		transform: translateY(-16px);
 	}
 
 	to {

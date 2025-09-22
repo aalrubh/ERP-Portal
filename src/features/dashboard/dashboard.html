@@ -1,3 +1,42 @@
-<div class="page page--dashboard">
-  <h1>Dashboard</h1>
-</div>
+<portal-panel [header]="true" [footer]="true">
+	<div panel-header>Dashboard Header</div>
+	<div panel-body>
+		<div class="page page--dashboard">
+			<button (click)="getPosts()">Fetch Data</button>
+			@if (posts) {
+			<h2>Fetched Data:</h2>
+			@for (post of posts ; track post.id) {
+			<div class="post">
+				<p>{{ post | json}}</p>
+			</div>
+			}
+			}
+		</div>
+	</div>
+	<div panel-footer>Dashboard Footer</div>
+</portal-panel>
+<portal-panel [header]="true">
+	<div panel-header>Another Panel Header</div>
+	<div class="cards" panel-body>
+		<portal-card [image]="true" [imageSrc]="'images/clogo.png'" [subHeadline]="true" [footer]="true">
+			<div card-headline>Card Headline</div>
+			<div card-subheadline>Card Subheadline</div>
+			<div card-content>This is the content of the card.</div>
+			<div card-footer>Card Footer</div>
+		</portal-card>
+
+		<portal-card [image]="true" [imageSrc]="'images/clogo.png'" [subHeadline]="true" [footer]="true">
+			<div card-headline>Card Headline</div>
+			<div card-subheadline>Card Subheadline</div>
+			<div card-content>This is the content of the card.</div>
+			<div card-footer>Card Footer</div>
+		</portal-card>
+
+		<portal-card [image]="true" [imageSrc]="'images/clogo.png'" [subHeadline]="true" [footer]="true">
+			<div card-headline>Card Headline</div>
+			<div card-subheadline>Card Subheadline</div>
+			<div card-content>This is the content of the card.</div>
+			<div card-footer>Card Footer</div>
+		</portal-card>
+	</div>
+</portal-panel>

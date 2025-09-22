@@ -1,9 +1,10 @@
-@use './../../../shared/styles/styles.scss' as *;
+@import '@shared/styles/styles.scss';
 
 div {
     @include flexContainer(row, wrap, flex-start, center, 25px);
     background-color: $rose;
-    padding: 8px 10px ;
+    padding: 8px 10px;
+
     img {
         max-width: 30px;
     }
@@ -23,7 +24,7 @@ div {
         font-weight: bold;
         padding: 5px 10px;
         border-radius: 10px;
-        
+
         &:hover {
             cursor: pointer;
             background: $rose-200;

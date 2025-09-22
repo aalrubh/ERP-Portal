@@ -1,1 +1,28 @@
-<p>card works!</p>
+<div class="card">
+    @if (image) {
+    <div class = "image_div">
+        <img class="image" [src] = "imageSrc">
+    </div>
+    }
+
+    <div class="headline">
+        <ng-content select="[card-headline]"></ng-content>
+    </div>
+
+    @if (subHeadline) {
+    <div class="sub-headline">
+        <ng-content select="[card-subheadline]"></ng-content>
+    </div>
+    }
+
+    <div class="content">
+        <ng-content select="[card-content]"></ng-content>
+    </div>
+
+    @if (footer) {
+    <div class="footer">
+        <ng-content select="[card-footer]"></ng-content>
+    </div>
+    }
+
+</div>

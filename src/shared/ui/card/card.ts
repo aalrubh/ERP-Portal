@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'portal-card',
@@ -7,5 +7,8 @@ import { Component } from '@angular/core';
   styleUrl: './card.scss'
 })
 export class Card {
-
+  @Input() image: boolean = false;
+  @Input() imageSrc : string = "";
+  @Input() subHeadline: boolean = false;
+  @Input() footer: boolean = false;
 }

@@ -1,7 +1,7 @@
 import { Component, EventEmitter, Input, OnChanges, Output, SimpleChanges } from '@angular/core';
-import { menuItem } from './components/menu-item/menu-item.interface';
+import { menuItem } from './menu-item/menu-item.interface';
 import sidebarNodes from './sidebar_nodes.json';
-import { MenuItemComponent } from "./components/menu-item/menu-item"
+import { MenuItemComponent } from "./menu-item/menu-item"
 import { MatIconModule } from "@angular/material/icon"
 @Component({
 	selector: 'portal-sidebar',

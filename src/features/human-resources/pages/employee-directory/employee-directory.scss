@@ -1,3 +1,8 @@
-.page--employee-directory {
-  // styles for employee-directory
+@import '@shared/styles/styles.scss';
+
+.card {
+  portal-card {
+    @include border(3px, solid, black);
+  }
+  width: 30%;
 }

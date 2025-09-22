@@ -1,0 +1,35 @@
+@import '@shared/styles/styles.scss';
+
+.top-bar {
+    @include border(all, 1px, solid, $border-color, 10px);
+    @include flexContainer(row, wrap, none, center);
+    box-sizing: border-box;
+    padding: 10px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    background-color: $gray-50;
+    margin-right: 10px;
+    margin-left: 10px;
+    font-size: large;
+
+    .title-class {
+        margin-right: auto;
+        font-weight: 500;
+        font-size: 20px;
+    }
+
+    img {
+        max-height: 30px;
+        border-radius: 100px;
+        margin-right: 0;
+        margin-left: 10px;
+    }
+
+    dx-drop-down-button {
+        border-color: none;
+        box-shadow: none;
+        background-color: none;
+        margin: 0;
+        padding: 0;
+    }
+}

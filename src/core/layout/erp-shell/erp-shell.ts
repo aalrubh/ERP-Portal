@@ -3,11 +3,12 @@ import { Sidebar } from "../sidebar/sidebar";
 import { Header } from "../header/header";
 import { Footer } from "../footer/footer";
 import { RouterOutlet } from '@angular/router'
+import { Topbar } from "../top-bar/topbar";
 
 @Component({
 	selector: 'portal-erp-shell',
 	standalone: true,
-	imports: [Sidebar, Header, Footer, RouterOutlet],
+	imports: [Sidebar, Header, Footer, RouterOutlet, Topbar],
 	templateUrl: './erp-shell.html',
 	styleUrls: ['./erp-shell.scss']
 })

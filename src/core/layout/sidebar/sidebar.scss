@@ -1,4 +1,4 @@
-@use './../../../shared/styles/styles.scss' as *;
+@import '@shared/styles/styles.scss';
 
 ul {
     @include border(right, 2px , solid , $border-color);

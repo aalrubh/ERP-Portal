@@ -1,0 +1,11 @@
+<div class="top-bar">
+    <span class = "title-class"> {{title}} </span>
+    <span>{{employee_name}}</span>
+    <img [src]="employee_profile_picture">
+    <dx-drop-down-button
+        [items] = "menuitems"
+        [dropDownOptions]="{ width: 150 }"
+        type = "default"
+        stylingMode = "text"
+    ></dx-drop-down-button>
+</div>

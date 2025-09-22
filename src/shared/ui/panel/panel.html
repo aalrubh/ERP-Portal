@@ -1,0 +1,13 @@
+
+
+<div class="panel">
+    @if (header) {
+        <div id="header"> <ng-content select="[panel-header]"></ng-content> </div>
+    }
+
+    <div id="body"> <ng-content select="[panel-body]"></ng-content> </div>
+
+    @if (footer) {
+        <div id="footer"> <ng-content select="[panel-footer]"></ng-content> </div>
+    }
+</div>

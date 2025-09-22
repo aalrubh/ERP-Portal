@@ -1,7 +1,6 @@
-import { Component, input, signal, forwardRef, createPlatform, OnChanges, EventEmitter, Output, effect } from "@angular/core";
+import { Component, input, forwardRef, EventEmitter, Output, effect, inject } from "@angular/core";
 import { menuItem } from "./menu-item.interface";
 import { NgClass } from "@angular/common";
-import { SimpleChanges } from "@angular/core";
 import { Router } from "@angular/router";
 
 @Component({
@@ -11,12 +10,14 @@ import { Router } from "@angular/router";
     templateUrl: './menu-item.html',
     styleUrls: ['./menu-item.scss']
 })
-export class MenuItemComponent  {
+export class MenuItemComponent {
     item = input.required<menuItem>();
     collapsed = input.required<boolean>();
     @Output() requestExpand = new EventEmitter();
 
-    constructor(private router: Router) {
+    router = inject(Router);
+
+    constructor() {
         effect(() => {
             if (this.collapsed()) {
                 const i = this.item();

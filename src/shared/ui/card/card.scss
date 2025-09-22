@@ -1,0 +1,50 @@
+@import '@shared/styles/styles.scss';
+
+* {
+    box-sizing: border-box
+}
+
+.card {
+    // max-width: 50%;
+    // width: 30%;
+    padding: 12px;
+
+    .image_div {
+        @include border(all, 3px, solid, $border-color, 10px);
+        @include flexContainer(row, center, center);
+        margin: auto;
+        background-color: $border-color;
+
+        aspect-ratio: 32/9;
+        width: 100%;
+        overflow: hidden;
+
+        .image {
+
+        }
+    }
+
+    .headline {
+        font-size: 24px;
+        font-weight: 600;
+        margin: 10px 0;
+    }
+
+    .subheadline {
+        font-size: 20px;
+        color: $gray-600;
+        margin: 10px 0 5px;
+    }
+
+    .content {
+        font-size: 18px;
+        color: $gray-800;
+        margin: 10px 0;
+    }
+
+    .footer {
+        font-size: 16px;
+        color: $gray-500;
+        padding-top: 10px;
+    }
+}
