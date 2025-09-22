@@ -1,11 +1,12 @@
-.page--dashboard {
-  // styles for dashboard
-}
-
 @import '@shared/styles/styles.scss';
 
 
 .cards {
-  @include flexContainer(row, center, space-around);
-  @include border(3, solid $border-color, 10px);
+	@include flexContainer(row, wrap, center, space-around);
+	@include border(3, solid $border-color, 10px);
+}
+
+portal-card {
+	@include border(3, solid $black, 10px);
+
 }

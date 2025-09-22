@@ -1,13 +1,10 @@
 @import '@shared/styles/styles.scss';
 
-* {
-    box-sizing: border-box
-}
-
 .card {
     // max-width: 50%;
     // width: 30%;
     padding: 12px;
+
 
     .image_div {
         @include border(all, 3px, solid, $border-color, 10px);
@@ -19,9 +16,7 @@
         width: 100%;
         overflow: hidden;
 
-        .image {
-
-        }
+        // .image {}
     }
 
     .headline {

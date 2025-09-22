@@ -18,7 +18,7 @@ export class ErpShell {
 	employee_profile_picture: string = "images/dwd.jpg";
 	
 	title !: string;
-	collapsed = false;
+	collapsed = true;
 
 	onActivate(component: unknown) {
 		queueMicrotask(() => { 
