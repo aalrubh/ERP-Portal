@@ -32,6 +32,7 @@
       "@assets/*": ["assets/*"],
       "@env/*": ["environments/*"],
       "@auth/*": ["auth/*"],
+	  "@interfaces/*": ["interfaces/*"],
       "jszip": ["./node_modules/jszip/dist/jszip.min.js"],
     },
 

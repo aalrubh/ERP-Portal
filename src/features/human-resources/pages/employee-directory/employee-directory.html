@@ -1,18 +1,89 @@
-<portal-panel [header]="true" [footer]="true">
-  <div panel-header>Employee Directory Header</div>
-  <div panel-body>
-    <div class="page page--employee-directory">
-      <h1>Hello</h1>
-    </div>
-  </div>
-  <div panel-footer>Employee Directory Footer</div>
-</portal-panel>
+<portal-panel [header]="true">
+	<div panel-header>Employee Directory Table</div>
+	<div panel-body>
+		<div class="table">
+			<portal-table>
+				<dx-data-grid 
+				[dataSource]="employees"
+				[showBorders]="true"
 
-<div class="card">
-<portal-card [image]="true" [imageSrc]="'images/clogo.png'" [subHeadline]="true" [footer]="true">
-  <div card-headline>Employee Card Headline</div>
-  <div card-subheadline>Employee Card Subheadline</div>
-  <div card-content>This is the content of the employee card.</div>
-  <div card-footer>Employee Card Footer</div>
-</portal-card>
-</div>
+				[allowColumnReordering]="true"
+				[allowColumnResizing]="true"
+				[columnAutoWidth]="true"
+
+				[searchPanel]="{ visible: true }"
+				[selection]="{ mode: 'single' }"
+				[sorting]="{ mode: 'multiple' }"
+				
+				[noDataText]="'No data to display'"
+
+				[pager]="{ 
+					showPageSizeSelector: true,
+					allowedPageSizes: [5, 10, 20],
+					showInfo: true
+				}"
+
+				[editing]="{ 
+					mode: 'row', 
+					allowUpdating: true, 
+					allowDeleting: true, 
+					allowAdding: true
+				}"
+
+				[filterRow]="{visible: true}"
+				table-body
+				>
+					<dxi-column 
+						dataType="string" 
+						dataField="full_name" 
+						caption="Full Name" 
+						alignment="center"
+					></dxi-column>
+
+					<dxi-column 
+						dataType="string" 
+						dataField="job_title" 
+						caption="Job Title" 
+						alignment="center"
+					></dxi-column>
+
+					<dxi-column 
+						dataType="string"
+						dataField="employment_type"
+						caption="Employeement Type"
+						alignment="center"
+					></dxi-column>
+					
+					<dxi-column
+						dataType="string"
+						dataField="status"
+						caption="Status"
+						alignment="center"
+					></dxi-column>
+
+					<dxi-column
+						dataType="string"
+						dataField="location"
+						caption="Location"
+						alignment="center"
+					></dxi-column>
+
+					<dxi-column
+						dataType="string"
+						dataField="email"
+						caption="Email"
+						alignment="center"
+					></dxi-column>
+
+					<dxi-column type="buttons" caption = "Actions" width = "110">
+						<dxi-button name="edit" 	icon = "edit"	></dxi-button>
+						<dxi-button name="delete" 	icon = "remove"	></dxi-button>
+						<dxi-button name="save" 	icon = "save"	></dxi-button>
+					</dxi-column>
+
+				</dx-data-grid>
+			</portal-table>
+		</div>
+	</div>
+	<div panel-footer>Employee Directory Footer</div>
+</portal-panel>

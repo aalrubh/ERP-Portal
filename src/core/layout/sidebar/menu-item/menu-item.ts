@@ -1,5 +1,5 @@
 import { Component, input, forwardRef, EventEmitter, Output, effect, inject } from "@angular/core";
-import { menuItem } from "./menu-item.interface";
+import { menuItem } from "@interfaces/menu-item";
 import { NgClass } from "@angular/common";
 import { Router } from "@angular/router";
 

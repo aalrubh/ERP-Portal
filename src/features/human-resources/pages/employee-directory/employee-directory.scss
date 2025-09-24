@@ -1,8 +1,9 @@
 @import '@shared/styles/styles.scss';
 
 .card {
-  portal-card {
-    @include border(3px, solid, black);
-  }
-  width: 30%;
+	portal-card {
+		@include border(3px, solid, black);
+	}
+
+	width: 30%;
 }

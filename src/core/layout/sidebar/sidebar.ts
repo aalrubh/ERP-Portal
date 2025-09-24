@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, OnChanges, Output, SimpleChanges } from '@angular/core';
-import { menuItem } from './menu-item/menu-item.interface';
+import { menuItem } from '@interfaces/menu-item';
 import sidebarNodes from './sidebar_nodes.json';
 import { MenuItemComponent } from "./menu-item/menu-item"
 import { MatIconModule } from "@angular/material/icon"

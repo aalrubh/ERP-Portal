@@ -1,0 +1,33 @@
+﻿@import '@shared/styles/styles.scss';
+
+::ng-deep .table .dx-datagrid {
+
+	.dx-header-row {
+		font-weight: 700;
+		color: $gray-700;
+	}
+
+	.dx-datagrid-headers {
+		border-radius: 8px;
+		border-bottom-left-radius: 0;
+		border-bottom-right-radius: 0;
+		font-size: medium;
+	}
+
+	.dx-header-row {
+		font-size: medium;
+	}
+
+	.dx-row-focused>td,
+	.dx-selection.dx-row>td {
+		background-color: $highlight-color;
+	}
+
+	.dx-datagrid-rowsview .dx-row:nth-child(odd)>td {
+		background-color: rgba($surface-color-3, 0.5);
+	}
+
+	.dx-row:hover>td {
+		background-color: rgba($accent-color, 0.10);
+	}
+}
