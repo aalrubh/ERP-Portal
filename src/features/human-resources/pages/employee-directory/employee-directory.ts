@@ -3,13 +3,13 @@ import { Panel } from "@shared/ui/panel/panel";
 import Employees from './employees_sa.json';
 import { Table } from "@shared/ui/table/table";
 import { DxDataGridComponent } from "devextreme-angular/ui/data-grid";
-import { DxiButtonComponent, DxiColumnComponent, DxoFilterPanelComponent, DxoSelectionComponent } from 'devextreme-angular/ui/nested';
+import { DxiButtonComponent, DxiColumnComponent } from 'devextreme-angular/ui/nested';
 @Component({
 	selector: 'app-human-resources-employee-directory',
 	templateUrl: './employee-directory.html',
 	styleUrls: ['./employee-directory.scss'],
 	standalone: true,
-	imports: [Panel, Table, DxDataGridComponent, DxiColumnComponent, DxiButtonComponent, DxoSelectionComponent, DxoFilterPanelComponent],
+	imports: [Panel, Table, DxDataGridComponent, DxiColumnComponent, DxiButtonComponent],
 })
 
 export class EmployeeDirectoryComponent {

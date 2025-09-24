@@ -9,7 +9,8 @@
 
 				[allowColumnReordering]="true"
 				[allowColumnResizing]="true"
-				[columnAutoWidth]="true"
+
+				[columnHidingEnabled] = "true"
 
 				[searchPanel]="{ visible: true }"
 				[selection]="{ mode: 'single' }"
@@ -24,11 +25,12 @@
 				}"
 
 				[editing]="{ 
-					mode: 'row', 
+					mode: 'batch', 
 					allowUpdating: true, 
 					allowDeleting: true, 
 					allowAdding: true
 				}"
+
 
 				[filterRow]="{visible: true}"
 				table-body
@@ -50,7 +52,7 @@
 					<dxi-column 
 						dataType="string"
 						dataField="employment_type"
-						caption="Employeement Type"
+						caption="Type"
 						alignment="center"
 					></dxi-column>
 					
