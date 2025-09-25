@@ -33,6 +33,7 @@
       "@env/*": ["environments/*"],
       "@auth/*": ["auth/*"],
 	  "@interfaces/*": ["interfaces/*"],
+	  "@environments/*": ["environments/*"],
       "jszip": ["./node_modules/jszip/dist/jszip.min.js"],
     },
 
