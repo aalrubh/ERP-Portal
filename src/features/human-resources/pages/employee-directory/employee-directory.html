@@ -1,4 +1,4 @@
-<portal-panel [header]="true">
+<portal-panel [header]="false">
 	<div panel-header>Employee Directory Table</div>
 	<div panel-body>
 		<div class="table">
@@ -12,7 +12,13 @@
 
 				[columnHidingEnabled] = "true"
 
-				[searchPanel]="{ visible: true }"
+				[searchPanel]="{ 
+					visible: true,
+					width: 300,
+					placeholder: 'Search Employees',
+					highlightSearchText: false,
+				}"
+
 				[selection]="{ mode: 'single' }"
 				[sorting]="{ mode: 'multiple' }"
 				
@@ -31,8 +37,11 @@
 					allowAdding: true
 				}"
 
+				[export]="{
+					enabled: true,
+					formats: ['pdf' , 'xlsx'],
+				}"
 
-				[filterRow]="{visible: true}"
 				table-body
 				>
 					<dxi-column 
@@ -40,7 +49,8 @@
 						dataField="full_name" 
 						caption="Full Name" 
 						alignment="center"
-					></dxi-column>
+					>
+				</dxi-column>
 
 					<dxi-column 
 						dataType="string" 

@@ -1,4 +1,4 @@
-import { Component, ViewChild } from '@angular/core';
+import { Component } from '@angular/core';
 import { Panel } from "@shared/ui/panel/panel";
 import Employees from './employees_sa.json';
 import { Table } from "@shared/ui/table/table";
@@ -9,7 +9,14 @@ import { DxiButtonComponent, DxiColumnComponent } from 'devextreme-angular/ui/ne
 	templateUrl: './employee-directory.html',
 	styleUrls: ['./employee-directory.scss'],
 	standalone: true,
-	imports: [Panel, Table, DxDataGridComponent, DxiColumnComponent, DxiButtonComponent],
+	imports:
+		[
+			Panel,
+			Table,
+			DxDataGridComponent,
+			DxiColumnComponent,
+			DxiButtonComponent,
+		],
 })
 
 export class EmployeeDirectoryComponent {
