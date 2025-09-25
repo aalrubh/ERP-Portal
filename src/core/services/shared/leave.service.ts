@@ -15,7 +15,7 @@ export class LeaveService {
 
   list(params?: LeaveListParams) {
     return this.http
-      .get<LeaveDto[]>('/leaves', { params })
+      .get<LeaveDto[]>('/leaves')
       .pipe(map((items) => ({ items, total: items.length })));
   }
 

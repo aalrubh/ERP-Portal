@@ -1,3 +1,11 @@
 
 
-<div> {{absences.items | json}} </div>
+<dx-data-grid
+	[dataSource]="absences.items"
+></dx-data-grid>
+
+<br>
+
+<dx-data-grid
+	[dataSource]="leaves.items"
+></dx-data-grid>

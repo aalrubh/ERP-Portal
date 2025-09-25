@@ -19,7 +19,7 @@ export class ProjectsTasksService {
 
   listProjects(params?: ProjectListParams) {
     return this.http
-      .get<ProjectDto[]>('/projects', { params })
+      .get<ProjectDto[]>('/projects')
       .pipe(map((items) => ({ items, total: items.length })));
   }
 
@@ -41,7 +41,7 @@ export class ProjectsTasksService {
 
   listTasks(params?: TaskListParams) {
     return this.http
-      .get<TaskDto[]>('/tasks', { params })
+      .get<TaskDto[]>('/tasks')
       .pipe(map((items) => ({ items, total: items.length })));
   }
 

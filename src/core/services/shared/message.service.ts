@@ -15,7 +15,7 @@ export class MessagesService {
 
   list(params?: MessageListParams) {
     return this.http
-      .get<MessageDto[]>('/messages', { params })
+      .get<MessageDto[]>('/messages')
       .pipe(map((items) => ({ items, total: items.length })));
   }
 
